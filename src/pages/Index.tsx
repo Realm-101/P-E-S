@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Home } from "@/pages/Home";
@@ -63,7 +64,7 @@ const Index = () => {
             onClick={() => handleNavigate("home")}
             className="font-serif text-2xl font-semibold cursor-pointer text-foreground hover:text-primary transition-colors"
           >
-            G_5.0
+            P.E.S.
           </button>
           <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
         </header>
