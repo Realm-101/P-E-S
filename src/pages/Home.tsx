@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import pesLogo from "@/assets/pes-logo-clean.png";
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -9,7 +10,7 @@ export const Home = ({ onNavigate }: HomeProps) => {
     <div className="text-center flex flex-col items-center justify-center min-h-[50vh] animate-fade-in">
       <div className="w-full max-w-md h-64 mb-8 flex items-center justify-center">
         <img 
-          src="/lovable-uploads/64764b6b-be2e-4001-ac84-150b480ba39b.png" 
+          src={pesLogo} 
           alt="P.E.S. Logo" 
           className="max-w-full max-h-full object-contain filter drop-shadow-glow"
         />
