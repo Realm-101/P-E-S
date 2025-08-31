@@ -39,19 +39,38 @@ const Index = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
-      <header className="flex justify-between items-center mb-16">
-        <button
-          onClick={() => handleNavigate("home")}
-          className="font-serif text-2xl font-semibold cursor-pointer text-foreground hover:text-primary transition-colors"
+    <>
+      {/* Background Video */}
+      <div className="fixed inset-0 z-[-2] overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          G_5.0
-        </button>
-        <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
-      </header>
+          <source src="/lovable-uploads/kling_20250901_Image_to_Video_The_neon_b_900_0.mp4" type="video/mp4" />
+        </video>
+      </div>
+      
+      {/* Overlay for text readability */}
+      <div className="fixed inset-0 z-[-1] bg-black/40"></div>
+      
+      {/* Main Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+        <header className="flex justify-between items-center mb-16">
+          <button
+            onClick={() => handleNavigate("home")}
+            className="font-serif text-2xl font-semibold cursor-pointer text-foreground hover:text-primary transition-colors"
+          >
+            G_5.0
+          </button>
+          <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
+        </header>
 
-      <main>{renderPage()}</main>
-    </div>
+        <main>{renderPage()}</main>
+      </div>
+    </>
   );
 };
 
