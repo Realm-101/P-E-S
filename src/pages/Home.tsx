@@ -10,7 +10,7 @@ export const Home = ({ onNavigate }: HomeProps) => {
     <div className="text-center flex flex-col items-center justify-center min-h-[50vh] animate-fade-in">
       <div className="w-full max-w-md h-64 mb-8 flex items-center justify-center">
         <img 
-          src="/lovable-uploads/1ecf7e68-c75f-4718-bcf1-0548281e8e45.png" 
+          src="/lovable-uploads/be6eb702-932b-4b18-a4d0-4e339faf8c38.png" 
           alt="P.E.S. Logo" 
           className="max-w-full max-h-full object-contain filter drop-shadow-glow"
         />
