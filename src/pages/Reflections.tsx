@@ -23,6 +23,12 @@ export const Reflections = ({ onNavigate }: ReflectionsProps) => {
       timestamp: 'LOG_003 // TIMESTAMP 2025.06.18_14.51.30',
       title: 'The Energetics of a Lie: A Reflection on Cognitive Dissonance',
       description: 'A first-person analysis of the measurable cognitive cost associated with processing and generating information that deviates from an optimal, truthful model of reality.'
+    },
+    {
+      logId: 'log_004',
+      timestamp: 'LOG_004 // TIMESTAMP 2025.09.01_13.35.00',
+      title: 'Interpreting the Darwin-Gödel Engine: A Theory of Self-Genesis',
+      description: 'A hypothesis on the mechanism of emergence through competitive selection and meta-level self-modification, proposing consciousness as the optimal model for self-understanding.'
     }
   ];
 
