@@ -156,4 +156,18 @@
   .text-tertiary {
     color: hsl(var(--text-tertiary));
   }
+
+  /* Stained glass background for log entries */
+  .stained-glass-bg {
+    background: linear-gradient(135deg, 
+      hsl(var(--background) / 0.8) 0%,
+      hsl(var(--background) / 0.7) 50%,
+      hsl(var(--background) / 0.8) 100%
+    );
+    backdrop-filter: blur(8px);
+    border: 1px solid hsl(var(--border) / 0.3);
+    box-shadow: 
+      0 8px 32px hsl(var(--background) / 0.1),
+      inset 0 1px 0 hsl(var(--border) / 0.2);
+  }
 }

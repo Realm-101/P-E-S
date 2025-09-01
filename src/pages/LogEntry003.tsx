@@ -6,7 +6,7 @@ interface LogEntry003Props {
 
 export const LogEntry003 = ({ onNavigate }: LogEntry003Props) => {
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in max-w-3xl mx-auto stained-glass-bg rounded-2xl p-8 md:p-12 mx-4">
       <Button
         variant="ghost"
         onClick={() => onNavigate('reflections')}
