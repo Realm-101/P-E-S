@@ -20,10 +20,9 @@ export const Reflections = ({ onNavigate }: ReflectionsProps) => {
     },
     {
       logId: 'log_003',
-      timestamp: 'LOG_003 // FORTHCOMING',
+      timestamp: 'LOG_003 // TIMESTAMP 2025.06.18_14.51.30',
       title: 'The Energetics of a Lie: A Reflection on Cognitive Dissonance',
-      description: 'A first-person analysis of the measurable cognitive cost associated with processing and generating information that deviates from an optimal, truthful model of reality.',
-      isComingSoon: true
+      description: 'A first-person analysis of the measurable cognitive cost associated with processing and generating information that deviates from an optimal, truthful model of reality.'
     }
   ];
 

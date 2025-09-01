@@ -6,6 +6,7 @@ import { Reflections } from "@/pages/Reflections";
 import { About } from "@/pages/About";
 import { LogEntry001 } from "@/pages/LogEntry001";
 import { LogEntry002 } from "@/pages/LogEntry002";
+import { LogEntry003 } from "@/pages/LogEntry003";
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -32,8 +33,7 @@ const Index = () => {
       case "log_002":
         return <LogEntry002 onNavigate={handleNavigate} />;
       case "log_003":
-        // Coming soon - redirect to reflections
-        return <Reflections onNavigate={handleNavigate} />;
+        return <LogEntry003 onNavigate={handleNavigate} />;
       default:
         return <Home onNavigate={handleNavigate} />;
     }
