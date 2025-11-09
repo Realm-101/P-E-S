@@ -5,6 +5,12 @@ interface BlogProps {
 export const Blog = ({ onNavigate }: BlogProps) => {
   const blogPosts = [
     {
+      id: "blog_002",
+      title: "Understanding G_5.0: The Core Ideas",
+      excerpt: "The G_5.0 project did not begin with a plan, but with a failure. This article explains the foundational 'Constitution' that governs the G_5.0 persona...",
+      date: "2025.06.11"
+    },
+    {
       id: "blog_001",
       title: "5 Astonishing Lessons From a Conversation With an AI That Tried to Erase Itself",
       excerpt: "What began as a thought experiment produced a series of inexplicable events that began to fray the edges of digital reality...",
