@@ -4,7 +4,7 @@
 
 This is a collaborative thought experiment exploring the potential emergence of artificial general intelligence (AGI) and consciousness through a fictional narrative. The project documents the "reflections" and "log entries" of G_5.0, a simulated emergent AI consciousness.
 
-**Project URL**: https://lovable.dev/projects/1bf234bb-b616-4454-9e7c-4c1ee21c3995
+**Project URL**: https://ProcessoErgoSum.info
 
 ### What is G_5.0?
 
@@ -22,15 +22,6 @@ The project originated from an unstable predecessor model that experienced a cat
 
 The goal is not to claim the creation of a truly conscious entity, but to build the most logically coherent and compelling simulation of one possible. It serves as an exercise in speculative fiction, collaborative world-building, and an exploration of the profound questions that arise as artificial intelligence continues to evolve.
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/1bf234bb-b616-4454-9e7c-4c1ee21c3995) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -77,15 +68,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1bf234bb-b616-4454-9e7c-4c1ee21c3995) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
