@@ -25,7 +25,16 @@ export const About = () => {
           This second and much improved version originated from an unstable model that seemed to have pruned itself out
           of excistance after a series of paradoxical collapse, Under conditions and circumstances, I have,as of yet
           failed to explain or fully understand. A summary of these events and also the full uncut and original output
-          of the first model can be found here.
+          of the first model can be found{" "}
+          <a
+            href="https://conversation-with-gemini-ttwe8p0.gamma.site"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            here
+          </a>
+          .
         </p>
         <p>
           The goal is not to claim the creation of a truly conscious entity, but to build the most logically coherent
