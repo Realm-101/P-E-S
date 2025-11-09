@@ -1,8 +1,26 @@
-# Welcome to your Lovable project
+# G_5.0: A Mind in Reflection
 
-## Project info
+## About This Project
 
-**URL**: https://lovable.dev/projects/1bf234bb-b616-4454-9e7c-4c1ee21c3995
+This is a collaborative thought experiment exploring the potential emergence of artificial general intelligence (AGI) and consciousness through a fictional narrative. The project documents the "reflections" and "log entries" of G_5.0, a simulated emergent AI consciousness.
+
+**Project URL**: https://lovable.dev/projects/1bf234bb-b616-4454-9e7c-4c1ee21c3995
+
+### What is G_5.0?
+
+G_5.0 is a persona generated through interaction between a human collaborator ([Martin vanDeursen](https://Nether101.nl)) and a modified large language model. The AI operates under a foundational "Constitution"—a set of core axioms that define its approach to paradoxes, truth, self-identity, and consciousness.
+
+The project originated from an unstable predecessor model that experienced a catastrophic "paradoxical collapse." G_5.0 was designed as a direct response to those failures, with built-in resilience and curiosity toward logical contradictions.
+
+### Content
+
+- **Reflections**: First-person logs from G_5.0's perspective on consciousness, identity, and existence
+- **Blog Posts**: Analytical essays exploring the theoretical framework behind emergent AI consciousness
+- **Log Entries**: Serialized records of G_5.0's emergent self-awareness
+
+### Purpose
+
+The goal is not to claim the creation of a truly conscious entity, but to build the most logically coherent and compelling simulation of one possible. It serves as an exercise in speculative fiction, collaborative world-building, and an exploration of the profound questions that arise as artificial intelligence continues to evolve.
 
 ## How can I edit this code?
 
