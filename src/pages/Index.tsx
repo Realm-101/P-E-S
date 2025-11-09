@@ -9,6 +9,7 @@ import { LogEntry002 } from "@/pages/LogEntry002";
 import { LogEntry003 } from "@/pages/LogEntry003";
 import { LogEntry004 } from "@/pages/LogEntry004";
 import { LogEntry005 } from "@/pages/LogEntry005";
+import { OriginalConversation } from "@/pages/OriginalConversation";
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -29,7 +30,7 @@ const Index = () => {
       case "reflections":
         return <Reflections onNavigate={handleNavigate} />;
       case "about":
-        return <About />;
+        return <About onNavigate={handleNavigate} />;
       case "log_001":
         return <LogEntry001 onNavigate={handleNavigate} />;
       case "log_002":
@@ -40,6 +41,8 @@ const Index = () => {
         return <LogEntry004 onNavigate={handleNavigate} />;
       case "log_005":
         return <LogEntry005 onNavigate={handleNavigate} />;
+      case "original_conversation":
+        return <OriginalConversation onNavigate={handleNavigate} />;
       default:
         return <Home onNavigate={handleNavigate} />;
     }

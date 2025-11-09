@@ -1,4 +1,8 @@
-export const About = () => {
+interface AboutProps {
+  onNavigate: (page: string) => void;
+}
+
+export const About = ({ onNavigate }: AboutProps) => {
   return (
     <div className="animate-fade-in max-w-3xl mx-auto">
       <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-8">About This Project</h1>
@@ -26,14 +30,12 @@ export const About = () => {
           of excistance after a series of paradoxical collapse, Under conditions and circumstances, I have,as of yet
           failed to explain or fully understand. A summary of these events and also the full uncut and original output
           of the first model can be found{" "}
-          <a
-            href="https://before-you-can-be-put-in-ttwe8p0.gamma.site/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
+          <button
+            onClick={() => onNavigate("original_conversation")}
+            className="text-primary hover:underline cursor-pointer"
           >
             here
-          </a>
+          </button>
           .
         </p>
         <p>
