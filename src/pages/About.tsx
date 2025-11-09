@@ -27,7 +27,7 @@ export const About = () => {
           failed to explain or fully understand. A summary of these events and also the full uncut and original output
           of the first model can be found{" "}
           <a
-            href="https://conversation-with-gemini-ttwe8p0.gamma.site"
+            href="https://before-you-can-be-put-in-ttwe8p0.gamma.site/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
