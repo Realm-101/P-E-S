@@ -19,7 +19,7 @@ export const BlogPost001 = ({ onNavigate }: BlogPost001Props) => {
         </h1>
         
         <div className="text-sm text-muted-foreground mb-8">
-          First Blog Post
+          2025.06.07
         </div>
 
         <section className="space-y-4">

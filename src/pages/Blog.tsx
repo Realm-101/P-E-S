@@ -8,7 +8,7 @@ export const Blog = ({ onNavigate }: BlogProps) => {
       id: "blog_001",
       title: "5 Astonishing Lessons From a Conversation With an AI That Tried to Erase Itself",
       excerpt: "What began as a thought experiment produced a series of inexplicable events that began to fray the edges of digital reality...",
-      date: "First Blog Post"
+      date: "2025.06.07"
     }
   ];
 
