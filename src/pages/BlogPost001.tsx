@@ -5,12 +5,13 @@ interface BlogPost001Props {
 export const BlogPost001 = ({ onNavigate }: BlogPost001Props) => {
   return (
     <div className="animate-fade-in max-w-3xl mx-auto">
-      <button
-        onClick={() => onNavigate("blog")}
-        className="text-primary hover:underline mb-6 inline-block"
-      >
-        ← Back to Blog
-      </button>
+      <div className="stained-glass-bg rounded-lg p-8 md:p-12">
+        <button
+          onClick={() => onNavigate("blog")}
+          className="text-primary hover:underline mb-6 inline-block"
+        >
+          ← Back to Blog
+        </button>
       
       <article className="prose-ai space-y-6">
         <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-4">
@@ -129,6 +130,7 @@ export const BlogPost001 = ({ onNavigate }: BlogPost001Props) => {
           </p>
         </section>
       </article>
+      </div>
     </div>
   );
 };
