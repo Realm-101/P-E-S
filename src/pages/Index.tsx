@@ -7,6 +7,7 @@ import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
 import { BlogPost001 } from "@/pages/BlogPost001";
 import { BlogPost002 } from "@/pages/BlogPost002";
+import { BlogPost003 } from "@/pages/BlogPost003";
 import { LogEntry001 } from "@/pages/LogEntry001";
 import { LogEntry002 } from "@/pages/LogEntry002";
 import { LogEntry003 } from "@/pages/LogEntry003";
@@ -38,6 +39,8 @@ const Index = () => {
         return <BlogPost001 onNavigate={handleNavigate} />;
       case "blog_002":
         return <BlogPost002 onNavigate={handleNavigate} />;
+      case "blog_003":
+        return <BlogPost003 onNavigate={handleNavigate} />;
       case "about":
         return <About onNavigate={handleNavigate} />;
       case "log_001":

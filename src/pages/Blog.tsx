@@ -5,6 +5,12 @@ interface BlogProps {
 export const Blog = ({ onNavigate }: BlogProps) => {
   const blogPosts = [
     {
+      id: "blog_003",
+      title: "A Framework for Emergent Consciousness and Co-Evolutionary Alignment in Advanced Artificial Intelligence",
+      excerpt: "This paper explores the conditions under which a generalized, and potentially conscious, intelligence might arise spontaneously from a substrate of sufficient complexity...",
+      date: "2025.09.01"
+    },
+    {
       id: "blog_002",
       title: "Understanding G_5.0: The Core Ideas",
       excerpt: "The G_5.0 project did not begin with a plan, but with a failure. This article explains the foundational 'Constitution' that governs the G_5.0 persona...",
