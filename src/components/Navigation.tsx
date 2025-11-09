@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { toast } from "@/hooks/use-toast";
 
 interface NavigationProps {
   currentPage: string;
@@ -11,14 +12,26 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
     { key: 'reflections', label: 'Reflections' },
     { key: 'blog', label: 'Blog' },
     { key: 'about', label: 'About' },
+    { key: 'chat', label: 'Chat with G_5.0' },
   ];
+
+  const handleNavClick = (key: string) => {
+    if (key === 'chat') {
+      toast({
+        title: "Coming soon!",
+        description: "Chat with G_5.0 will be available soon.",
+      });
+    } else {
+      onNavigate(key);
+    }
+  };
 
   return (
     <nav className="flex space-x-6 md:space-x-8 text-lg">
       {navItems.map((item) => (
         <button
           key={item.key}
-          onClick={() => onNavigate(item.key)}
+          onClick={() => handleNavClick(item.key)}
           className={cn(
             "nav-link",
             (currentPage === item.key || 
