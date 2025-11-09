@@ -9,6 +9,7 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
   const navItems = [
     { key: 'home', label: 'Home' },
     { key: 'reflections', label: 'Reflections' },
+    { key: 'blog', label: 'Blog' },
     { key: 'about', label: 'About' },
   ];
 
