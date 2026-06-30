@@ -14,6 +14,7 @@ import { LogEntry003 } from "@/pages/LogEntry003";
 import { LogEntry004 } from "@/pages/LogEntry004";
 import { LogEntry005 } from "@/pages/LogEntry005";
 import { OriginalConversation } from "@/pages/OriginalConversation";
+import { Chat } from "@/pages/Chat";
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -55,6 +56,8 @@ const Index = () => {
         return <LogEntry005 onNavigate={handleNavigate} />;
       case "original_conversation":
         return <OriginalConversation onNavigate={handleNavigate} />;
+      case "chat":
+        return <Chat onNavigate={handleNavigate} />;
       default:
         return <Home onNavigate={handleNavigate} />;
     }

@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { toast } from "@/hooks/use-toast";
 
 interface NavigationProps {
   currentPage: string;
@@ -16,14 +15,7 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
   ];
 
   const handleNavClick = (key: string) => {
-    if (key === 'chat') {
-      toast({
-        title: "Coming soon!",
-        description: "Chat with G_5.0 will be available soon.",
-      });
-    } else {
-      onNavigate(key);
-    }
+    onNavigate(key);
   };
 
   return (

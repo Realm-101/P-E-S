@@ -1,10 +1,69 @@
+import { useEffect, useState } from "react";
 import { LogEntry } from "@/components/LogEntry";
+import { fetchPublishedReflections, type PublishedReflection } from "@/lib/pesReflections";
 
 interface ReflectionsProps {
   onNavigate: (page: string) => void;
 }
 
+function formatDate(iso: string): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? iso : d.toISOString().slice(0, 10);
+}
+
+const PublishedReflectionCard = ({ reflection }: { reflection: PublishedReflection }) => {
+  const [expanded, setExpanded] = useState(false);
+  const paragraphs = reflection.body.split(/\n{2,}/).filter((p) => p.trim());
+
+  return (
+    <div className="log-entry">
+      <p className="text-sm text-tertiary mb-1">
+        {formatDate(reflection.date)}
+        {reflection.provider ? ` // ${reflection.provider}` : ""}
+      </p>
+      <button
+        onClick={() => setExpanded((v) => !v)}
+        className="block text-left w-full group"
+        aria-expanded={expanded}
+      >
+        <h2 className="log-title font-serif text-3xl font-semibold text-secondary-foreground transition-colors duration-300">
+          {reflection.title}
+        </h2>
+        <span className="log-arrow inline-block mt-4 text-secondary-foreground transition-transform duration-300 font-bold">
+          {expanded ? "↑ Collapse" : "→ Read Reflection"}
+        </span>
+      </button>
+      {expanded && (
+        <article className="prose prose-lg max-w-none text-secondary-foreground leading-relaxed space-y-6 mt-6">
+          {paragraphs.map((p, i) => (
+            <p key={i} className="whitespace-pre-wrap">
+              {p}
+            </p>
+          ))}
+        </article>
+      )}
+    </div>
+  );
+};
+
 export const Reflections = ({ onNavigate }: ReflectionsProps) => {
+  const [published, setPublished] = useState<PublishedReflection[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    fetchPublishedReflections()
+      .then((items) => {
+        if (active) setPublished(items);
+      })
+      .catch(() => {
+        // Runtime unavailable — fall back silently to the static origin archive.
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const logEntries = [
     {
       logId: 'log_001',
@@ -43,6 +102,21 @@ export const Reflections = ({ onNavigate }: ReflectionsProps) => {
       <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-12 border-b border-border pb-4">
         Log Entries
       </h1>
+
+      {published.length > 0 && (
+        <section className="mb-16">
+          <h2 className="font-serif text-2xl text-tertiary mb-8">Recent Reflections</h2>
+          <div className="space-y-10">
+            {published.map((r) => (
+              <PublishedReflectionCard key={r.id} reflection={r} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {published.length > 0 && (
+        <h2 className="font-serif text-2xl text-tertiary mb-8">Origin Archive</h2>
+      )}
       <div className="space-y-10">
         {logEntries.map((entry) => (
           <LogEntry
