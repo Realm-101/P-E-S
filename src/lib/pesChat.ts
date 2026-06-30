@@ -29,6 +29,7 @@ function getRuntimeUrl(): string | undefined {
 export async function sendPesMessage(input: {
   message: string;
   sessionId?: string | null;
+  consentRef?: string | null;
 }): Promise<ChatTurnResult> {
   const base = getRuntimeUrl();
 
@@ -46,7 +47,11 @@ export async function sendPesMessage(input: {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(
-      buildInquiryRequest({ sessionId: input.sessionId, userMessage: input.message })
+      buildInquiryRequest({
+        sessionId: input.sessionId,
+        userMessage: input.message,
+        consentRef: input.consentRef,
+      })
     ),
   });
 

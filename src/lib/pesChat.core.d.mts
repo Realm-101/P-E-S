@@ -3,6 +3,7 @@ export interface InquiryRequest {
   mode: "dialogic";
   userMessage: string;
   sessionId?: string;
+  consentRef?: string;
 }
 
 export interface InquiryReply {
@@ -14,6 +15,7 @@ export interface InquiryReply {
 export function buildInquiryRequest(input: {
   sessionId?: string | null;
   userMessage: string;
+  consentRef?: string | null;
 }): InquiryRequest;
 
 export function parseInquiryReply(json: unknown): InquiryReply;
