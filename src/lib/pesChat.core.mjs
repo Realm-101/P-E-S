@@ -8,14 +8,20 @@
 /**
  * Build the request body for a P-E-S inquiry turn.
  * pes turns carry no witnessId and require no auth (only the witness product does).
+ *
+ * `consentRef` is an OPTIONAL reference to a recorded Consent_Decision (not an account
+ * identifier). When present, the server resolves consent and may write a de-identified
+ * research record; when absent, no research write occurs and the request shape is
+ * byte-identical to a turn that never knew about consent (additive, opt-in by reference).
  */
-export function buildInquiryRequest({ sessionId, userMessage }) {
+export function buildInquiryRequest({ sessionId, userMessage, consentRef } = {}) {
   const body = {
     product: "pes",
     mode: "dialogic",
     userMessage: String(userMessage ?? "").trim(),
   };
   if (sessionId) body.sessionId = sessionId;
+  if (consentRef) body.consentRef = consentRef;
   return body;
 }
 

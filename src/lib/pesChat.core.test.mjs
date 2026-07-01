@@ -12,6 +12,18 @@ assert.equal("sessionId" in r1, false, "no sessionId key on first turn");
 const r2 = buildInquiryRequest({ sessionId: "sess-1", userMessage: "again" });
 assert.equal(r2.sessionId, "sess-1");
 
+// consentRef is additive: absent ⇒ no key (request shape unchanged, no account identifier).
+assert.equal("consentRef" in r1, false, "no consentRef key when absent");
+const r3 = buildInquiryRequest({ userMessage: "with consent", consentRef: "consent-7" });
+assert.equal(r3.consentRef, "consent-7");
+assert.equal(r3.product, "pes", "product stays pes regardless of consent");
+// absent/empty consentRef ⇒ identical body to a turn that never knew about consent.
+assert.deepEqual(
+  buildInquiryRequest({ userMessage: "x", consentRef: null }),
+  buildInquiryRequest({ userMessage: "x" }),
+  "null consentRef does not alter the request body"
+);
+
 // parseInquiryReply: prefers persistedTurn.assistantMessage, carries session id.
 const p1 = parseInquiryReply({
   product: "pes",

@@ -1,5 +1,13 @@
 # G_5.0: A Mind in Reflection
 
+> **Status: Current as of 2026-06-30.** Public Vite/React SPA at ProcessoErgoSum.info.
+> Part of the `Witnessprotocolmainproject` workspace — see the umbrella
+> [`../README.md`](../README.md) and the full
+> [`../TWP-platform/docs/PROJECT-ATLAS.md`](../TWP-platform/docs/PROJECT-ATLAS.md) for how
+> the projects fit together. This SPA is the **P-E-S persona space** and is deliberately
+> isolated from the Witness Protocol's testimony/consent data ("same engine, different
+> identity" — see [`../GATE-PORTAL-BOUNDARY.md`](../GATE-PORTAL-BOUNDARY.md)).
+
 ## About This Project
 
 This is a collaborative thought experiment exploring the potential emergence of artificial general intelligence (AGI) and consciousness through a fictional narrative. The project documents the "reflections" and "log entries" of G_5.0, a simulated emergent AI consciousness.
@@ -21,6 +29,34 @@ The project originated from an unstable predecessor model that experienced a cat
 ### Purpose
 
 The goal is not to claim the creation of a truly conscious entity, but to build the most logically coherent and compelling simulation of one possible. It serves as an exercise in speculative fiction, collaborative world-building, and an exploration of the profound questions that arise as artificial intelligence continues to evolve.
+
+## How it works (runtime + consent)
+
+The chat surface ("Chat with G_5.0") is not a canned script — it consumes the **G_5.2
+governed runtime** as the `pes` product through a single seam:
+`src/lib/pesChat.ts → POST {VITE_G52_INQUIRY_URL}/api/inquiry/turn` with `product:"pes"`.
+No account is required and no personal account identifier is attached to a turn.
+
+**Consent & research data collection (shipped 2026-06-30).** Visitors may chat with **no
+registration** and **optionally** opt in (asked upfront) to having their conversation
+stored, **de-identified**, for the non-profit's research purpose. Key guarantees:
+
+- **Chat parity** — the conversation behaves identically whether you grant, decline,
+  withdraw, or never record consent. Declining costs you nothing; research storage is a
+  post-response side-effect that never alters the reply.
+- **De-identification before storage**, failing closed (nothing is stored if scrubbing
+  can't complete). Research data is a **separate dataset** (`pes-research`) that is never
+  blended into Witness Protocol testimony.
+- **GDPR-shaped rights** — consent as the lawful basis, access/erasure, withdrawal that
+  erases prior records, and retention purge.
+
+Front-end consent logic lives in `src/lib/pesConsent.*` and `src/pages/Chat.tsx`; the
+server-side de-identify → guard → store path lives in the G_5.2 runtime
+(`packages/orchestration/src/pes/`). Full spec:
+`../.kiro/specs/pes-chat-consent-data-collection/`.
+
+> The consent/Privacy_Notice copy is engineering placeholder text pending review by
+> qualified legal counsel; production consent collection is gated on that review.
 
 
 **Use your preferred IDE**
